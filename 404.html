@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+      const oldUrl = new URL(window.location.href);
+      const newOrigin = 'https://watilde.wordpress.com';
+      const newUrl = new URL(oldUrl.pathname + oldUrl.search + oldUrl.hash, newOrigin);
+
+      window.location.replace(newUrl.href); 
+    </script>
+    <noscript>
+      <meta http-equiv="refresh" content="0;url=https://watilde.wordpress.com/">
+    </noscript>
+    <link rel="canonical" href="https://watilde.wordpress.com/">
+  </head>
+  <body>
+    Redirecting to <a id="link" href="https://watilde.wordpress.com/">watilde.wordpress.com</a>...
+    <script>
+      document.getElementById('link').href = "https://watilde.wordpress.com" + window.location.pathname;
+    </script>
+  </body>
+</html>
